@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ass3</title>
+    <link rel="stylesheet" href="./indx.css" />
+  </head>
+  <body>
+    <div id="main">
+      <label for="Game Name" class="name">Guessing Game</label>
+      <label for="Guessing number in between" id="lbl"></label>
+      <input type="text" id="txt" />
+      <button id="btn">Check Your Guess</button>
+      <p id="body"></p>
+      <p id="remain">Attempt left</p>
+      <p id="count">5</p>
+      <p id="attempt">Your Attempts :</p>
+    </div>
+
+    <script>
+      let lbl = document.getElementById("lbl");
+      let txt = document.getElementById("txt");
+      let btn = document.getElementById("btn");
+      let body = document.getElementById("body");
+      let attempt = document.getElementById("attempt");
+      let count = document.getElementById("count");
+      let maxNum = 10;
+      let minNum = 1;
+      lbl.innerText = `Guess a number in between ${minNum} and ${maxNum}`;
+      let ranDom = Math.floor(Math.random() * 10 + 1);
+      //   body.innerText = a;
+      let c = 5;
+      btn.addEventListener("click", () => {
+        // for (let index = 0; index < 5; index++) {
+        // }
+        if (c > 0) {
+          let num = txt.value;
+          if (ranDom == num) {
+            body.innerText = "Correct Guess";
+            c = 1;
+          } else if (ranDom > num) {
+            body.innerText = "Your Guess is low!!";
+          } else if (ranDom < num) {
+            body.innerText = "Your Guess is high!!";
+          }
+          c--;
+          count.innerText = c;
+          let spanTag = document.createElement("span");
+          spanTag.innerText = ` ${num} `;
+          attempt.appendChild(spanTag);
+        }
+      });
+    </script>
+  </body>
+</html>

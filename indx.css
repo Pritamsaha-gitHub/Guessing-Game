@@ -1,0 +1,44 @@
+#main{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    border:  5px solid red;
+    width: 30vw;
+    height: 70vh;
+    position: relative;
+    top: 10vh;
+    left: 35vw;
+    background: rgb(97, 226, 200);
+}
+.name{
+    font-size: 40px;
+    color: blue;
+    font-weight: 600;
+margin-bottom: 10px;}
+#lbl{
+    color:palevioletred;
+margin-bottom: 60px;}
+#txt{
+    margin-bottom: 10px;
+    
+}
+#btn{
+    color: green;
+    background: rgb(231, 186, 216);
+    border-radius: 5px;
+    padding: 5px;
+    /* margin-bottom: -10px; */
+}
+#count{
+    position: relative;
+    /* margin-top: -20px; */
+    /* bottom: 10px; */
+}
+#remain{
+    /* margin-top: -20px; */
+    position: relative;
+    top: 35px;
+}
